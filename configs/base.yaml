@@ -1,0 +1,16 @@
+model:
+  d_model: 512
+  encoder_layers: 6
+  decoder_layers: 6
+  num_experts: 16
+  top_k: 2
+  shared_experts: 2
+training:
+  batch_size: 2048
+  learning_rate: 0.0007
+  warmup_steps: 4000
+  max_steps: 120000
+data:
+  source_languages: [en, de, fr, es, zh]
+  target_language: en
+  tokenizer: sentencepiece
